@@ -981,11 +981,14 @@
 			baseConfigurationReference = 567F57F2AF2D614C37EC2392 /* Pods-XZHImageBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: YiLin Tan (CKF5A7DPZE)";
 				GCC_PREFIX_HEADER = "XZHImageBrowser/XZH-Prefix.pch";
 				INFOPLIST_FILE = XZHImageBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ycmedia.XZHImageBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -994,11 +997,14 @@
 			baseConfigurationReference = 2735737C4F3BD84EB951EEA0 /* Pods-XZHImageBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: YiLin Tan (CKF5A7DPZE)";
 				GCC_PREFIX_HEADER = "XZHImageBrowser/XZH-Prefix.pch";
 				INFOPLIST_FILE = XZHImageBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ycmedia.XZHImageBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

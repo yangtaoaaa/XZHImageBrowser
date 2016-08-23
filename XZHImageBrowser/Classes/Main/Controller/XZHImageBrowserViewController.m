@@ -12,6 +12,8 @@
 
 @interface XZHImageBrowserViewController ()
 
+@property (nonatomic, strong) NSMutableArray *imgModelArr;
+
 @end
 
 @implementation XZHImageBrowserViewController
@@ -47,16 +49,17 @@
                         ];
     
     [self setupImageDataWithUrl:imgUrlArr];
-//    XZHImageBrowserView *imgView = [[XZHImageBrowserView alloc]initWithFrame:self.view.bounds imgArrs:imgArr];
-//    XZHImageBrowserView *imgView = [[XZHImageBrowserView alloc]init];
+//    XZHImageBrowserView *imgView = [[XZHImageBrowserView alloc]initWithFrame:self.view.bounds imgArrs:imgUrlArr];
 //    [self.view addSubview:imgView];
 }
 
 - (void)setupImageDataWithUrl:(NSArray *)imgUrlArr{
     // 模型数组
-    NSMutableArray *imgModelArr = [NSMutableArray array];
+    NSMutableArray *imgModelArr = [[NSMutableArray alloc]initWithCapacity:6];
+    
     for(int i = 0; i < imgUrlArr.count; i++){
         XZHImage *imgModel = [[XZHImage alloc]init];
+        // 暂时只有url，别的版本会加入imageView或者CGRect
         if(imgUrlArr == nil){
             imgModel.urlStr = @"";
         }else{
@@ -65,10 +68,17 @@
         [imgModelArr addObject:imgModel];
     }
     // 传递模型包给ImageBrowser
-    XZHImageBrowserView *view = [[XZHImageBrowserView alloc]init];
-    [view setImageData:imgModelArr];
+    XZHImageBrowserView *imageView = [[XZHImageBrowserView alloc]init];
+    [imageView setImageData:imgModelArr];
+    [self.view addSubview:imageView];
 }
 
+- (NSMutableArray *)imgModelArr{
+    if(_imgModelArr == nil){
+        _imgModelArr = [NSMutableArray array];
+    }
+    return _imgModelArr;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -77,3 +87,7 @@
 
 
 @end
+
+
+
+

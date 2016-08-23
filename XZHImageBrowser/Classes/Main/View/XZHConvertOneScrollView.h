@@ -10,4 +10,10 @@
 
 @interface XZHConvertOneScrollView : UIScrollView
 
+
+/* 浏览器中我是第几个图片 */
+@property(nonatomic,assign)NSInteger index;
+/* 加载web图片 */
+- (void)setWebImage:(NSString *)imgUrlStr;
+
 @end

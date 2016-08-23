@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XZHImageBrowserView : UIView
+@interface XZHImageBrowserView : UIScrollView
 
 /* 带frame的scrollView */
 - (id)initWithFrame:(CGRect)frame;
