@@ -1,15 +1,15 @@
 //
 //  AppDelegate.h
-//  XZHImageBrowser
+//  XZH图片浏览
 //
-//  Created by ycmedia_imac on 16/8/4.
+//  Created by ycmedia_imac on 16/8/3.
 //  Copyright © 2016年 何紫璇. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface XZHAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

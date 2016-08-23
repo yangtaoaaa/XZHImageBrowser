@@ -1,0 +1,86 @@
+//
+//  XZH-Prefix.pch
+//  XZHImageBrowser
+//
+//  Created by ycmedia_imac on 16/8/4.
+//  Copyright © 2016年 何紫璇. All rights reserved.
+//
+
+#ifndef XZH_Prefix_pch
+#define XZH_Prefix_pch
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "RXMD5.h"
+#import "RXHttpTool.h"
+#import "RXGeneSign.h"
+#import "RXUserDefaultTool.h"
+
+#import "MBProgressHUD+MJ.h"
+#import "UIBarButtonItem+YZ.h"
+#import "UIView+SZ.h"
+#import "XZHBaseButton.h"
+#import "SDCycleScrollView.h"
+
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "MBProgressHUD+MJ.h"
+
+#define screenWidth   ([UIScreen mainScreen].bounds.size.width)
+#define screenHeight  ([UIScreen mainScreen].bounds.size.height)
+
+#define KEY_WINDOW  [[UIApplication sharedApplication] keyWindow]
+#define iOS8 ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
+#define iOS7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
+#define iOS6 ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+
+// 自定义RGB颜色
+#define RXColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+// 是否为4inch
+#define iPhone4s ([UIScreen mainScreen].bounds.size.height < 568)
+#define iPhone5 ([UIScreen mainScreen].bounds.size.height == 568)
+//测试颜色
+#define testColor ([UIColor colorWithRed:0 green:225 blue:0 alpha:0.5])
+//statuBar的高度
+#define statusBarH 20
+//#define statusBarH  [UIApplication sharedApplication].statusBarFrame.size.height
+//navigationBar的高度
+#define navBarH 44
+//#define navBarH  self.navigationController.navigationBar.frame.size.height
+//tabBar的高度
+#define tabBarH 49
+//self.tabBarController.tabBar.frame.size.height
+//常用的淡橙色背景
+#define orangeBackgroundColor RXColor(255, 254, 241, 1.0)
+#define appid id462532069
+//自定义Log
+#ifdef DEBUG
+#define RXLog(...) NSLog(__VA_ARGS__)
+#else
+#define RXLog(...)
+#endif
+
+// 后台地址
+#define preAddress @"http://rx.app.95dao.com/APII/"
+
+#endif
+
+
+
+
+
+#endif /* XZH_Prefix_pch */
+
+
+
+
+
+
