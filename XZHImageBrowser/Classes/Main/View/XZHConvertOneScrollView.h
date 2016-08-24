@@ -15,5 +15,7 @@
 @property(nonatomic,assign)NSInteger index;
 /* 加载web图片 */
 - (void)setWebImage:(NSString *)imgUrlStr;
+//回复放大缩小前的原状
+-(void)reloadFrame;
 
 @end

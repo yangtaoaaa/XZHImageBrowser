@@ -66,6 +66,14 @@
     NSInteger x = scrollView.contentOffset.x;
     NSInteger w = scrollView.width;
 //    RXLog(@"contentOffset的x的值是=====%ld, scrollView的宽度是======%ld", x, w);
+    NSInteger nowIndex = (x + w/2)/ w;
+//    RXLog(@"滑动到第几个========%ld", nowIndex);
+    for(int i = 0; i < self.oneScrollArr.count; i++){
+        if(i != nowIndex){
+            XZHConvertOneScrollView *oneScrollView = self.oneScrollArr[i];
+            [oneScrollView reloadFrame];
+        }
+    }
 }
 
 #pragma mark - 重载init方法-----暂时不用了
